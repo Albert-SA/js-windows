@@ -1,2 +1,6 @@
-console.log('Hello World!');
-console.log('Hello kity');
+import './slider';
+import modals from './modules/modals';
+
+window.addEventListener('DOMContentLoaded', () => {
+  modals();
+});
