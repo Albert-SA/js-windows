@@ -1,11 +1,11 @@
 const modals = () => {
-  function bindModal(triggerSelector, modalSelector, closeSelector) {
-    const trigger = document.querySelectorAll(triggerSelector),
-      modal = document.querySelector(modalSelector),
-      close = document.querySelector(closeSelector);
+  function bindModal(triggersSelector, modalSelector, closeSelector) {
+    const triggers = document.querySelectorAll(triggersSelector);
+    const modal = document.querySelector(modalSelector);
+    const close = document.querySelector(closeSelector);
 
-    trigger.forEach((item) => {
-      item.addEventListener('click', (e) => {
+    triggers.forEach((trigger) => {
+      trigger.addEventListener('click', (e) => {
         if (e.target) {
           e.preventDefault();
         }
