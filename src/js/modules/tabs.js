@@ -35,6 +35,22 @@ const tabs = ({ headerSelector, tabsSelector, contentsSelector, activeClass }) =
       });
     }
   });
+  // Add keyboard navigation
+  document.addEventListener('keydown', (event) => {
+    const tabElemIndex = Array.from(tabElems).indexOf(document.querySelector(`.${activeClass}`));
+    console.log(tabElemIndex);
+    if (event.code === 'ArrowLeft' || event.code === 'ArrowRight') {
+      event.preventDefault();
+      hideTabContent();
+      if (event.code === 'ArrowLeft') {
+        const newIndex = tabElemIndex === 0 ? tabElems.length - 1 : tabElemIndex - 1;
+        showTabContent(newIndex);
+      } else if (event.code === 'ArrowRight') {
+        const newIndex = tabElemIndex === tabElems.length - 1 ? 0 : tabElemIndex + 1;
+        showTabContent(newIndex);
+      }
+    }
+  });
 };
 
 export default tabs;
