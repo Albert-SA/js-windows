@@ -1,6 +1,6 @@
-const tabs = ({ headerSelector, tabs, contentsSelector, activeClass }) => {
+const tabs = ({ headerSelector, tabsSelector, contentsSelector, activeClass }) => {
   const header = document.querySelector(headerSelector);
-  const tabElems = document.querySelectorAll(tabs);
+  const tabElems = document.querySelectorAll(tabsSelector);
   const contents = document.querySelectorAll(contentsSelector);
 
   const hideTabContent = () => {
@@ -24,8 +24,8 @@ const tabs = ({ headerSelector, tabs, contentsSelector, activeClass }) => {
     const target = event.target;
     if (
       target &&
-      (target.classList.contains(tabs.replace(/\./, '')) ||
-        target.parentNode.classList.contains(tabs.replace(/\./, '')))
+      (target.classList.contains(tabsSelector.replace(/\./, '')) ||
+        target.parentNode.classList.contains(tabsSelector.replace(/\./, '')))
     ) {
       tabElems.forEach((tab, index) => {
         if (target == tab || target.parentNode == tab) {
