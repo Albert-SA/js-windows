@@ -1,9 +1,12 @@
 import './slider';
 import modals from './modules/modals';
+import forms from './modules/forms';
 import tabs from './modules/tabs';
 
 window.addEventListener('DOMContentLoaded', () => {
+  'use strict';
   modals();
+  forms();
   tabs({
     headerSelector: '.glazing_slider',
     tabsSelector: '.glazing_block',
