@@ -37,7 +37,6 @@ const tabs = ({ headerSelector, tabsSelector, contentsSelector, activeClass }) =
   };
 
   header.addEventListener('click', selectTab);
-  // Add keyboard navigation
   document.addEventListener('keydown', selectTab);
 };
 
