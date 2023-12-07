@@ -9,17 +9,16 @@ const forms = () => {
   };
 
   const postData = async (url, data) => {
-    document.querySelector('.status').textContent = message.loading; // textContent == innerHtml
+    document.querySelector('.status').textContent = message.loading;
     let res = await fetch(url, {
-      // fetch - асинхронный, поэтому async/await
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
       body: data,
-    }); //запрос POST
+    });
 
-    return await res.text(); //promise
+    return await res.text();
   };
 
   const clearInputs = () => {
@@ -35,7 +34,7 @@ const forms = () => {
       statusMessage.classList.add('status');
       form.appendChild(statusMessage);
 
-      const formData = new FormData(form); //тело запроса
+      const formData = new FormData(form);
       const jsonData = JSON.stringify(Object.fromEntries(formData.entries()));
 
       postData('https://simple-server-cumz.onrender.com/api/data', jsonData)
