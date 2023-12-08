@@ -19,4 +19,11 @@ window.addEventListener('DOMContentLoaded', () => {
     contentsSelector: '.decoration_content > div > div',
     activeClass: 'after_click',
   });
+  tabs({
+    headerSelector: '.balcon_icons',
+    tabsSelector: '.balcon_icons_img',
+    contentsSelector: '.big_img > img',
+    activeClass: 'do_image_more',
+    display: 'inline-block',
+  });
 });

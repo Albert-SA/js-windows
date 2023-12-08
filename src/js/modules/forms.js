@@ -37,7 +37,7 @@ const forms = () => {
       const formData = new FormData(form);
       const jsonData = JSON.stringify(Object.fromEntries(formData.entries()));
 
-      postData('https://simple-server-cumz.onrender.com/api/data', jsonData)
+      postData('https://simple-server-cumz.1111onrender.com/api/data', jsonData)
         .then((res) => {
           console.log(res);
           statusMessage.textContent = message.success;
