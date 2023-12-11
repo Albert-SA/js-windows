@@ -880,10 +880,10 @@
   </div>
 
   <!-- Calculator -->
-  <div class="popup_calc" data-modal>
+  <div class="popup_calc" data-modal >
     <div class="popup_dialog">
       <div class="popup_calc_content text-center">
-        <button type="button" class="popup_calc_close"><strong>&times;</strong></button>
+        <button type="button" class="popup_calc_close" ><strong>&times;</strong></button>
         <h2>Калькулятор</h2>
         <h3>Выберите форму балкона <br>и укажите размеры</h3>
         <div class="balcon_icons">
@@ -907,7 +907,7 @@
         <div class="multiplication"><strong>&times;</strong></div>
         <input class="form-control" id="height" type="text" placeholder="Высота" required>
         <label for="height">мм</label>
-        <button class="button popup_calc_button">Далее</button>
+        <button class="button popup_calc_button" aria-hidden="true">Далее</button>
       </div>
     </div>
   </div>
@@ -927,18 +927,18 @@
         </select>
         <img src="./src/assets/img/modal_calc/icon_cold.png" alt="">
         <label>
-          <input class="checkbox" type="checkbox" name="checkbox-test">
-          <span class="checkbox-custom" id="cold"></span>
+          <input class="checkbox" type="radio" value="Холодное" name="checkbox-test" hidden>
+          <span class="checkbox-custom" id="cold" tabindex="0"></span>
           <span class="label">Холодное</span>
         </label>
         <img src="./src/assets/img/modal_calc/icon_warm.png" alt="">
         <label>
-          <input class="checkbox" type="checkbox" name="checkbox-test">
-          <span class="checkbox-custom" id="warm"></span>
+          <input class="checkbox" type="radio" value="Теплое" name="checkbox-test" hidden>
+          <span class="checkbox-custom" id="warm" tabindex="0"></span>
           <span class="label">Теплое</span>
         </label>
 
-        <button class="button popup_calc_profile_button">Далее</button>
+        <button class="button popup_calc_profile_button" aria-hidden="true">Далее</button>
       </div>
     </div>
   </div>

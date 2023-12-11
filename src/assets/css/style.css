@@ -6,6 +6,10 @@ html {
   font-size: 10px;
 }
 
+[hidden] {
+  display: none !important;
+}
+
 body {
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
@@ -25,6 +29,7 @@ a:hover {
 a:focus,
 button:focus,
 input:focus,
+select:focus,
 textarea:focus {
   outline: none;
 }
