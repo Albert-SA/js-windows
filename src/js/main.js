@@ -3,6 +3,7 @@ import modals from './modules/modals';
 import forms from './modules/forms';
 import tabs from './modules/tabs';
 import changeModalState from './modules/changeModalState';
+import timer from './modules/timer';
 
 window.addEventListener('DOMContentLoaded', () => {
   'use strict';
@@ -32,4 +33,5 @@ window.addEventListener('DOMContentLoaded', () => {
     display: 'inline-block',
   });
   forms(modalState);
+  timer('.container1', '2023-12-30');
 });
