@@ -1,6 +1,10 @@
-const forms = () => {
+import checkNumInputs from './checkNumInputs';
+
+const forms = (state) => {
   const formElems = document.querySelectorAll('form');
   const inputs = document.querySelectorAll('input');
+
+  checkNumInputs('input[name="user_phone"]');
 
   const message = {
     loading: 'Загрузка...',
@@ -35,6 +39,11 @@ const forms = () => {
       form.appendChild(statusMessage);
 
       const formData = new FormData(form);
+      if (form.getAttribute('data-calc') === 'end') {
+        for (let key in state) {
+          formData.append(key, state[key]);
+        }
+      }
       const jsonData = JSON.stringify(Object.fromEntries(formData.entries()));
 
       postData('https://simple-server-cumz.onrender.com/api/data', jsonData)

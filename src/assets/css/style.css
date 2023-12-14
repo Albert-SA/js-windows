@@ -25,8 +25,10 @@ a:hover {
 a:focus,
 button:focus,
 input:focus,
-textarea:focus {
+select:focus,
+textarea:focus-visible {
   outline: none;
+  box-shadow: 0 0 0 2px #ffffff, 0 0 3px 5px #3a97f9;
 }
 
 .no-padding {
@@ -1022,7 +1024,22 @@ textarea:focus {
 }
 
 .popup_calc_profile_content .checkbox {
-  display: none;
+  opacity: 0;
+  /* appearance: none; */
+}
+
+.popup_calc_profile_content .checkbox.sr-only {
+  border: 0;
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: polygon(0px 0px, 0px 0px, 0px 0px);
+  clip-path: polygon(0px 0px, 0px 0px, 0px 0px);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
 }
 
 .popup_calc_profile_content .checkbox-custom {
@@ -1042,11 +1059,13 @@ textarea:focus {
 .popup_calc_profile_content .checkbox:checked+.checkbox-custom::before {
   content: "";
   display: block;
+  /* opacity: 1; */
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
+  box-shadow: 0 0 0 2px #ffffff, 0 0 3px 5px #3a97f9;
 }
 
 .checkbox-custom[id="cold"]::before {
