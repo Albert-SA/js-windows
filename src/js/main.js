@@ -33,5 +33,5 @@ window.addEventListener('DOMContentLoaded', () => {
     display: 'inline-block',
   });
   forms(modalState);
-  timer('.container1', '2023-12-29');
+  timer('.container1', '2023-12-31');
 });
