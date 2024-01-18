@@ -34,6 +34,6 @@ window.addEventListener('DOMContentLoaded', () => {
     display: 'inline-block',
   });
   forms(modalState);
-  timer('.container1', '2023-12-21');
+  timer('.container1', '2024-12-21');
   images();
 });
